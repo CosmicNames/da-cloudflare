@@ -1,0 +1,27 @@
+{
+  "name": "cosmicnames/dacloudflare",
+  "description": "A CloudFlare plugin for Directadmin",
+  "license": "MIT",
+  "version": "0.1.0",
+  "homepage": "https://github.com/CosmicNames/da-cloudflare",
+  "scripts": {
+    "test": "vendor/bin/phpunit src/Test",
+    "lint": "vendor/bin/phpcs -n --standard=PSR2 --extensions=php,live.php src/",
+    "format": "vendor/bin/phpcbf --standard=PSR2 --extensions=php,live.php src/"
+  },
+  "require": {
+    "symfony/yaml": "~2.6",
+    "guzzlehttp/guzzle": "~5.0",
+    "true/punycode": "~2.0",
+    "cloudflare/cloudflare-plugin-backend": "^2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CosmicNames\\DirectAdmin\\CF\\": "src/"
+    }
+  }
+}
